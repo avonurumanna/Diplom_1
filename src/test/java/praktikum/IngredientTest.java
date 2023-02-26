@@ -11,6 +11,7 @@ public class IngredientTest {
     private final String ingredientName = "black bun";
     private final float ingredientPrice = 100F;
 
+
     Ingredient ingredient;
     @Mock
     IngredientType ingredientType;
@@ -21,17 +22,17 @@ public class IngredientTest {
     }
 
     @Test
-    public void ingredientGetNameExpectedReturnName() {
+    public void ingredientGetNameExpectedReturnNameTest() {
         assertEquals(ingredientName, ingredient.getName());
     }
 
     @Test
-    public void ingredientGetPriceExpectedReturnPrice() {
+    public void ingredientGetPriceExpectedReturnPriceTest() {
         assertEquals(ingredientPrice, ingredient.getPrice(), 0);
     }
 
     @Test
-    public void ingredientGetIngredientTypeExpectedReturnIngredientType() {
+    public void ingredientGetIngredientTypeExpectedReturnIngredientTypeTest() {
         assertEquals(ingredient.getType(), ingredientType);
     }
 

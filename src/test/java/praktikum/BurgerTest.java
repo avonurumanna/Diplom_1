@@ -23,20 +23,20 @@ public class BurgerTest {
 
 
     @Test
-    public void burgerAddIngredientExpectedIngredientAdded() {
+    public void burgerAddIngredientExpectedIngredientAddedTest() {
         burger.addIngredient(firstIngredient);
         assertEquals(1, burger.ingredients.size());
     }
 
     @Test
-    public void burgerRemoveIngredientExpectedIngredientRemoved() {
+    public void burgerRemoveIngredientExpectedIngredientRemovedTest() {
         burger.addIngredient(firstIngredient);
         burger.removeIngredient(0);
         assertEquals(0, burger.ingredients.size());
     }
 
     @Test
-    public void burgerMoveIngredientExpectedIngredientMoved() {
+    public void burgerMoveIngredientExpectedIngredientMovedTest() {
         burger.addIngredient(firstIngredient);
         burger.addIngredient(secondIngredient);
         burger.moveIngredient(0, 1);
@@ -44,18 +44,18 @@ public class BurgerTest {
     }
 
     @Test
-    public void burgerGetPriceExpectedReturnPrice() {
+    public void burgerGetPriceExpectedReturnPriceTest() {
         burger.setBuns(bun);
         burger.addIngredient(firstIngredient);
         burger.addIngredient(secondIngredient);
         Mockito.when(bun.getPrice()).thenReturn(100F);
         Mockito.when(firstIngredient.getPrice()).thenReturn(200F);
         Mockito.when(secondIngredient.getPrice()).thenReturn(300F);
-        assertEquals(700F, burger.getPrice(), 0.0);
+        assertEquals(700F, burger.getPrice(), 0);
     }
 
     @Test
-    public void burgerGetReceiptExpectedReturnReceipt() {
+    public void burgerGetReceiptExpectedReturnReceiptTest() {
         burger.setBuns(bun);
         burger.addIngredient(firstIngredient);
         burger.addIngredient(secondIngredient);

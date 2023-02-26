@@ -6,8 +6,8 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class BunTest {
-    public static final float bunPrice = 0.75f;
-    public static String bunName = "Bun";
+    public final float bunPrice = 0.75f;
+    public final String bunName = "Bun";
     Bun bun;
 
 
@@ -17,13 +17,13 @@ public class BunTest {
     }
 
     @Test
-    public void bunGetNameExpectedReturnName() {
+    public void bunGetNameExpectedReturnNameTest() {
         assertEquals(bunName, bun.getName());
     }
 
     @Test
-    public void bunGetNameExpectedReturnPrice() {
-        assertEquals(bunPrice, bun.getPrice(), 0.1f);
+    public void bunGetPriceExpectedReturnPriceTest() {
+        assertEquals(bunPrice, bun.getPrice(), 0);
     }
 
 

@@ -23,7 +23,7 @@ public class IngredientTypeTest {
     }
 
     @Test
-    public void ingredientTypeValueOfExpectedReturnValue() {
+    public void ingredientTypeValueOfExpectedReturnValueTest() {
         assertEquals(IngredientType.valueOf(ingredientType).toString(), ingredientType);
     }
 
